@@ -169,10 +169,10 @@ class AssistantManager:
                 if run_status.status == "completed":
                     self.process_messages()
                     break
-                elif run_status == "requires_action":
+                elif run_status.status == "requires_action":
                     print("FUNCTION CALLING NOW...")
                     self.call_required_functions(
-                        required_actions= run_status.required_action.submit_tool_outputs.model.dump()
+                        required_actions= run_status.required_action.submit_tool_outputs.model_dump()
                     )
     # Run the steps
     def run_steps(self):
