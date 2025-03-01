@@ -182,6 +182,7 @@ class AssistantManager:
         )
 
         print(f" Run Steps::: {run_steps}")
+        return run_steps
 
 
 def main():
